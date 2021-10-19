@@ -13,7 +13,7 @@ exports.sendEmail =  (mailOptions) => {
     from: `"node-auth-api" <${process.env.SENDER_EMAIL}>`
   },
   (err, data, res) => {
-    if(err) console.log('Error in sending mail...\n' + err)
+    if(err) console.log('Error in sending mail...\n' + err.Message)
     else console.log('Mail Send Successfuly...\n' + data)
   })
 }

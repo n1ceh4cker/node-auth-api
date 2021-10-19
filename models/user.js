@@ -6,7 +6,8 @@ const User = new mongoose.Schema({
     default: false,
   },
   email: {
-    type: String
+    type: String,
+    unique: true
   },
 })
 User.plugin(passportLocalMongoose, {

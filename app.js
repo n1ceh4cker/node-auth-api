@@ -41,7 +41,7 @@ const url = process.env.MONGODB_URL
 const dbOptions = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  autoIndex: false,
+  useCreateIndex: true
 }
 mongoose.connect(url, dbOptions).then(
   (db) => {
